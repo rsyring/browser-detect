@@ -6,3 +6,7 @@ Credits To:
 
 * http://www.quirksmode.org/js/detect.html
 * http://www.featureblend.com/javascript-flash-detection-library.html
+
+### Demo ###
+
+http://rcs-comp.com/browser-detect/
