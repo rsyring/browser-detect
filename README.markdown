@@ -4,8 +4,8 @@ Simply puts together a few tools found on the web to make browser/flash detectio
 
 Credits To:
 
-* http://www.quirksmode.org/js/detect.html
-* http://www.featureblend.com/javascript-flash-detection-library.html
+* <http://www.quirksmode.org/js/detect.html>
+* <http://www.featureblend.com/javascript-flash-detection-library.html>
 
 ### Demo ###
 
