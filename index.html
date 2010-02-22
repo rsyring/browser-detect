@@ -12,7 +12,7 @@
     <script type="text/javascript" src="flash_detect.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
-            $('#browser').text(BrowserDetect.browser)
+            $('#browser').text(BrowserDetect.browser + ' ' + BrowserDetect.version)
             $('#os').text(BrowserDetect.OS)
             $('#flash').text(FlashDetect.installed ? 'Flash Installed' : 'No Flash')
             $('#flash_version').text(FlashDetect.installed ? FlashDetect.raw : '')
