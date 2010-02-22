@@ -9,4 +9,4 @@ Credits To:
 
 ### Demo ###
 
-http://rcs-comp.com/browser-detect/
+<http://rcs-comp.com/browser-detect/>
