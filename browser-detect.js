@@ -27,6 +27,11 @@ var BrowserDetect = {
 	dataBrowser: [
 		{
 			string: navigator.userAgent,
+			subString: "RockMelt",
+			identity: "RockMelt"
+		},
+		{
+			string: navigator.userAgent,
 			subString: "Chrome",
 			identity: "Chrome"
 		},
