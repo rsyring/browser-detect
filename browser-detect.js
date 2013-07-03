@@ -7,8 +7,20 @@ var BrowserDetect = {
 		this.OS = this.searchString(this.dataOS) || "an unknown OS";
 		this.device = this.searchString(this.dataDevice) || "an unknown Device";
 	},
+	isBrowser: function(browser) {
+		return this.browser.toLowerCase().indexOf(browser.toLowerCase()) !== -1;
+	},
+	isVersion: function(version) {
+		return parseFloat(this.version) ? eval(this.version + version.replace(/^=([0-9\.]+)/, "==$1")) : null;
+	},
+	isOS: function(OS) {
+		return this.OS.toLowerCase().indexOf(OS.toLowerCase()) !== -1;
+	},
+	isDevice: function(device) {
+		return this.device.toLowerCase().indexOf(device.toLowerCase()) !== -1;
+	},
 	searchString: function (data) {
-		for (var i=0;i<data.length;i++)	{
+		for (var i=0;i<data.length;i++) {
 			var dataString = data[i].string;
 			var dataProp = data[i].prop;
 			this.versionSearchString = data[i].versionSearch || data[i].identity;
@@ -44,6 +56,12 @@ var BrowserDetect = {
 		{
 			string: navigator.vendor,
 			subString: "Apple",
+			identity: "Safari",
+			versionSearch: "Version"
+		},
+		{
+			string: navigator.userAgent,
+			subString: "Safari",
 			identity: "Safari",
 			versionSearch: "Version"
 		},
@@ -116,6 +134,11 @@ var BrowserDetect = {
 			string: navigator.userAgent,
 			subString: "iOS",
 			identity: "iOS"
+		},
+		{
+			string: navigator.userAgent,
+			subString: "iPhone OS",
+			identity: "iPhone OS"
 		}
 	],
 	dataDevice : [
@@ -128,6 +151,16 @@ var BrowserDetect = {
 			string: navigator.platform,
 			subString: "iPhone",
 			identity: "iPhone"
+		},
+		{
+			string: navigator.platform,
+			subString: "Android",
+			identity: "Android"
+		},
+		{
+			string: navigator.userAgent,
+			subString: "Android",
+			identity: "Android"
 		}
 	]
 
