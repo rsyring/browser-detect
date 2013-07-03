@@ -17,8 +17,11 @@
             $('#flash').text(FlashDetect.installed ? 'Flash Installed' : 'No Flash')
             $('#flash_version').text(FlashDetect.installed ? FlashDetect.raw : '')
             
+            console.log( BrowserDetect );
+
             $("#is_ie").text(BrowserDetect.isBrowser("MSIE"));
             $("#is_mozilla").text(BrowserDetect.isBrowser("Mozilla"));
+            $("#is_firefox").text(BrowserDetect.isBrowser("Firefox"));
             $("#is_chrome").text(BrowserDetect.isBrowser("Chrome"));
             $("#is_safari").text(BrowserDetect.isBrowser("Safari"));
 
@@ -45,6 +48,7 @@
     <li id="flash_version"></li>
     <li >Is IE ? <span id="is_ie"></span></li>
     <li >Is Mozilla ? <span id="is_mozilla"></span></li>
+    <li >Is Firefox ? <span id="is_firefox"></span></li>
     <li >Is Chrome ? <span id="is_chrome"></span></li>
     <li >Is Safari ? <span id="is_safari"></span></li>
     
