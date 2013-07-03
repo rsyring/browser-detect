@@ -8,16 +8,16 @@ var BrowserDetect = {
         this.device = this.searchString(this.dataDevice) || "an unknown Device";
     },
     isBrowser: function(browser) {
-    	return this.browser.toLowerCase().indexOf(browser.toLowerCase()) !== -1;
+        return this.browser.toLowerCase().indexOf(browser.toLowerCase()) !== -1;
     },
     isVersion: function(version) {
-    	return parseFloat(this.version) ? eval(this.version + version.replace(/^=([0-9\.]+)/, "==$1")) : null;
+        return parseFloat(this.version) ? eval(this.version + version.replace(/^=([0-9\.]+)/, "==$1")) : null;
     },
     isOS: function(OS) {
-    	return this.OS.toLowerCase().indexOf(OS.toLowerCase()) !== -1;
+        return this.OS.toLowerCase().indexOf(OS.toLowerCase()) !== -1;
     },
     isDevice: function(device) {
-		return this.device.toLowerCase().indexOf(device.toLowerCase()) !== -1;
+        return this.device.toLowerCase().indexOf(device.toLowerCase()) !== -1;
     },
     searchString: function (data) {
         for (var i=0;i<data.length;i++) {
