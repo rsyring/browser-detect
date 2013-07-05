@@ -16,6 +16,24 @@
             $('#os').text(BrowserDetect.OS)
             $('#flash').text(FlashDetect.installed ? 'Flash Installed' : 'No Flash')
             $('#flash_version').text(FlashDetect.installed ? FlashDetect.raw : '')
+            
+            $("#is_ie").text(BrowserDetect.isBrowser("MSIE"));
+            $("#is_mozilla").text(BrowserDetect.isBrowser("Mozilla"));
+            $("#is_firefox").text(BrowserDetect.isBrowser("Firefox"));
+            $("#is_chrome").text(BrowserDetect.isBrowser("Chrome"));
+            $("#is_safari").text(BrowserDetect.isBrowser("Safari"));
+
+            $("#gt_10").text(BrowserDetect.isVersion("=10"));
+            $("#gt_8").text(BrowserDetect.isVersion(">=8"));
+            $("#ls_7").text(BrowserDetect.isVersion("<7"));
+
+            $("#is_linux").text(BrowserDetect.isOS("Linux"));
+            $("#is_windows").text(BrowserDetect.isOS("Windows"));
+            $("#is_mac").text(BrowserDetect.isOS("Mac"));
+
+            $("#is_iphone").text(BrowserDetect.isDevice("iPhone"));
+            $("#is_ipad").text(BrowserDetect.isDevice("iPad"));
+            $("#is_android").text(BrowserDetect.isDevice("Android"));
         });
     </script>   
 </head>
@@ -26,6 +44,23 @@
     <li id="os"></li>
     <li id="flash"></li>
     <li id="flash_version"></li>
+    <li >Is IE ? <span id="is_ie"></span></li>
+    <li >Is Mozilla ? <span id="is_mozilla"></span></li>
+    <li >Is Firefox ? <span id="is_firefox"></span></li>
+    <li >Is Chrome ? <span id="is_chrome"></span></li>
+    <li >Is Safari ? <span id="is_safari"></span></li>
+    
+    <li >Equal to 10 ? <span id="gt_10"></span></li>
+    <li >Greater or equal to 8 ? <span id="gt_8"></span></li>
+    <li >Less than 6 ? <span id="ls_7"></span></li>
+    
+    <li >Linux ? <span id="is_linux"></span></li>
+    <li >Windows ? <span id="is_windows"></span></li>
+    <li >Mac ? <span id="is_mac"></span></li>
+
+    <li >iPhone ? <span id="is_iphone"></span></li>
+    <li >iPad ? <span id="is_ipad"></span></li>
+    <li >Android ? <span id="is_android"></span></li>
 </ul>
 </body>
 
